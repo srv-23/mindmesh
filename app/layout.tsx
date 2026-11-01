@@ -18,6 +18,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// Headings only; the optical-size axis gives large headings a tighter, more characterful cut.
 const bricolage = Bricolage_Grotesque({
   variable: "--font-display",
   subsets: ["latin"],
@@ -25,7 +26,7 @@ const bricolage = Bricolage_Grotesque({
 });
 
 export const metadata: Metadata = {
-  title: "Mindmesh: Agentic Workspace",
+  title: "Outpost: Agentic Workspace",
   description:
     "An AI agent that draws and writes alongside you and your team, live.",
   icons: {
@@ -35,16 +36,11 @@ export const metadata: Metadata = {
   manifest: "/manifest.json",
   // Link previews (Slack, X, iMessage...). On Vercel, Next fills in the site URL for these paths.
   openGraph: {
-    title: "Mindmesh: Agentic Workspace",
+    title: "Outpost: Agentic Workspace",
     description:
       "An AI agent that draws and writes alongside you and your team, live.",
     images: [
-      {
-        url: "/social/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Mindmesh",
-      },
+      { url: "/social/og-image.png", width: 1200, height: 630, alt: "Outpost" },
     ],
   },
   twitter: { card: "summary_large_image", images: ["/social/og-image.png"] },
@@ -52,6 +48,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
+    // Outpost is dark-only, so Clerk's baseTheme is hardcoded to dark rather than synced to a toggle.
     <ClerkProvider
       appearance={{
         theme: dark,
