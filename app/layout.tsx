@@ -26,29 +26,47 @@ const bricolage = Bricolage_Grotesque({
 });
 
 export const metadata: Metadata = {
-  title: "Outpost: Agentic Workspace",
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
+  ),
+
+  title: "Mindmesh: Agentic Workspace",
+
   description:
     "An AI agent that draws and writes alongside you and your team, live.",
+
   icons: {
     icon: "/icon.png",
     apple: "/apple-icon.png",
   },
+
   manifest: "/manifest.json",
-  // Link previews (Slack, X, iMessage...). On Vercel, Next fills in the site URL for these paths.
+
   openGraph: {
-    title: "Outpost: Agentic Workspace",
+    title: "Mindmesh: Agentic Workspace",
+
     description:
       "An AI agent that draws and writes alongside you and your team, live.",
+
     images: [
-      { url: "/social/og-image.png", width: 1200, height: 630, alt: "Outpost" },
+      {
+        url: "/social/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Mindmesh",
+      },
     ],
   },
-  twitter: { card: "summary_large_image", images: ["/social/og-image.png"] },
+
+  twitter: {
+    card: "summary_large_image",
+    images: ["/social/og-image.png"],
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    // Outpost is dark-only, so Clerk's baseTheme is hardcoded to dark rather than synced to a toggle.
+    // Mindmesh is dark-only, so Clerk's baseTheme is hardcoded to dark rather than synced to a toggle.
     <ClerkProvider
       appearance={{
         theme: dark,

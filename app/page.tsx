@@ -9,14 +9,14 @@ import { AUDIENCES, STEPS, SURFACES } from "./_data/landing";
 export default function Home() {
   return (
     <div className="flex flex-1 flex-col">
-      {/* Hero, over the topographic contours that give Outpost its look */}
+      {/* Hero, over the topographic contours that give Mindmesh its look */}
       <section className="topo-bg px-6 pt-10 pb-24 md:px-10 md:pt-16">
         <MapAnnotations />
         <div className="mx-auto flex max-w-5xl flex-col items-center text-center">
           <SectionLabel>Early access</SectionLabel>
 
           <h1 className="mt-2 max-w-3xl text-4xl font-semibold tracking-tight md:text-6xl">
-            An <span className="text-primary">outpost</span> for whatever
+            An <span className="text-primary">Mindmesh</span> for whatever
             you&apos;re building
           </h1>
 
@@ -48,7 +48,7 @@ export default function Home() {
               loop
               playsInline
               poster="/videos/hero-poster.jpg"
-              aria-label="Outpost walkthrough: the agent draws an architecture diagram and writes the spec"
+              aria-label="Mindmesh walkthrough: the agent draws an architecture diagram and writes the spec"
               className="size-full object-cover"
             >
               <source src="/videos/hero.webm" type="video/webm" />
@@ -85,7 +85,7 @@ export default function Home() {
               One agent, one workspace, your whole team
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Outpost isn&apos;t another AI diagram generator. The same agent
+              Mindmesh isn&apos;t another AI diagram generator. The same agent
               reasons across your canvas and your docs, turning a rough sketch
               into a written spec without you copying anything by hand. And your
               team is right there with you.
@@ -170,7 +170,7 @@ export default function Home() {
       </section>
 
       <footer className="border-t border-white/10 px-6 py-8 text-center text-sm text-muted-foreground md:px-10">
-        Made with ❤️ by RoadsideCoder
+        Made with ❤️ by Saurabh Chaurasia.
       </footer>
     </div>
   );

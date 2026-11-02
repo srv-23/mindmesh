@@ -60,7 +60,7 @@ export function AgentChatPanel({
               height={18}
               className="size-4.5"
             />
-            Outpost Agent
+            Mindmesh Agent
           </div>
 
           <div className="flex-1 space-y-3 overflow-y-auto p-4">

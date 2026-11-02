@@ -53,7 +53,7 @@ export default async function SharedPage({
         >
           <Image
             src="/brand/mascot-dark.png"
-            alt="Outpost"
+            alt="Mindmesh"
             width={24}
             height={24}
             className="size-6"
