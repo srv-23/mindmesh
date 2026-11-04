@@ -7,6 +7,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { AppShell } from "@/components/AppShell";
 import { UpgradeDialogProvider } from "@/components/UpgradeDialog";
 import "./globals.css";
+import type { Viewport } from "next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,6 +25,12 @@ const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
   axes: ["opsz"],
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  interactiveWidget: "resizes-content",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(
